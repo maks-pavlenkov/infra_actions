@@ -1,4 +1,10 @@
-# .github/workflows/**main.yml**
+# запуск проверки проекта по flake8
+        python -m flake8
+        # перейти в папку, содержащую manage.py — 
+        #<корневая_папка_infra_actions>/<папка_проекта>/manage.py
+        cd infra_project/
+        # запустить написанные разработчиком тесты
+        python manage.py test# .github/workflows/**main.yml**
 name: Django-app workflow
 
 on: [push]
@@ -33,7 +39,7 @@ jobs:
       run: |
         # запуск проверки проекта по flake8
         python -m flake8
-        #<корневая_папка_infra_actions>/<папка_проекта>/manage.py
+        # <корневая_папка_infra_actions>/<папка_проекта>/manage.py
         cd infra_project/
 	# запустить написанные разработчиком тесты
         python manage.py test
